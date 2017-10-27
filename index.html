@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Apprendre le PHP</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form method="post" action="encrypt.php" style="box-shadow: 2px 2px black;">
+			<fieldset>
+				<p><strong>Formulaire de Cryptage</strong></p>
+				<label for="cle">Clé de Chiffrement : </label><input type="text" name="cle"><br>
+				<label for="msg">Message à crypter :  </label><textarea name="msg"></textarea><br><br>
+				<input type="submit" name="valider">
+			</fieldset>
+		</form>
+		<form method="post" action="decrypt.php" style="box-shadow: 2px 2px black;">
+			<fieldset>
+				<p><strong>Formulaire de Décryptage</strong></p>
+				<label for="cle">Clé de Chiffrement : </label><input type="text" name="cle"><br>
+				<label for="msg">Message à crypter :  </label><textarea name="msg"></textarea><br><br>
+				<input type="submit" name="valider">
+			</fieldset>
+		</form>
+	</body>
+</html>
