@@ -263,7 +263,7 @@
 				}
 				return($lettre);
 			}
-			if(!isset($_POST['cle']) || !isset($_POST['msg']))
+			if(empty($_POST['cle']) || empty($_POST['msg']))
 			{
 				echo "<p>Mauvaise saisie, les deux champs doivent être remplis.</p>";
 				echo "<a href=\"crypt.html\">Retour</a>";

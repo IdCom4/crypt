@@ -263,8 +263,7 @@
 				}
 				return($lettre);
 			}
-
-			if(!isset($_POST['cle']) || !isset($_POST['msg']))
+			if(empty($_POST['cle']) || empty($_POST['msg']))
 			{
 				echo "<p>Mauvaise saisie, les deux champs doivent être remplis.</p>";
 				echo "<a href=\"crypt.html\">Retour</a>";
@@ -273,11 +272,12 @@
 			{
 				$i = 0;
 				$n = 0;
+				echo $_POST['cle'];
 				$lengthCle = strlen($_POST['cle']);
 				$lengthMsg = strlen($_POST['msg']);
 				$Cle = $_POST['cle'];
 				$Msg = $_POST['msg'];
-				echo $Msg;
+				//echo $Msg;
 				while($i < $lengthMsg)
 				{
 					
@@ -304,7 +304,7 @@
 				// echo '<p>$n = '.$n.'</p>';
 				// echo '<p>$n = '.ord($n).'</p>';
 				$Msg[$i] = $n;
-				echo '$n = '.$n.' && $i = '.$i.' && $Msg[$i] = '.$Msg[$i];
+				//echo '$n = '.$n.' && $i = '.$i.' && $Msg[$i] = '.$Msg[$i];
 				echo '<p>Voici votre Clé de chiffrement:</p>';
 				echo '<p style="padding: 5px; background-color: lightgrey; border: solid black 2px">' . $Cle . '</p><br/>';
 				echo '<p>Votre message crypté:</p>';
